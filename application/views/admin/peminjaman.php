@@ -80,7 +80,7 @@
     <footer class="footer">
       <div class="container-fluid">
         <div class="copyright ml-left">
-          Copyright © 2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.instagram.com/buday.05/">Bogem</a>
+          Copyright © 2020, made with <i class="fa fa-skull skull text-danger"></i> by <a href="https://www.instagram.com/galih17maliky/">Bogem</a>
         </div>        
       </div>
     </footer>

@@ -107,7 +107,7 @@ class Admin extends CI_Controller{
           redirect(base_url().'admin/buku');
         }else{
           $this->load->view('admin/header');
-          $this->load->view('admin/buku');
+          $this->load->view('admin/tambahbuku');
           $this->load->view('admin/footer');
         }
       }
@@ -119,14 +119,14 @@ class Admin extends CI_Controller{
         redirect(base_url().'admin/buku');
       }
 
-    function edit_buku($id){
-      $where = array('id_buku' => $id);
-      $data['buku'] = $this->db->query("select * from buku B, kategori K where B.id_kategori=K.id_kategori and B.id_buku='$id'")->result();
-      $data['kategori'] = $this->M_perpus->get_data('kategori')->result();
+   function edit_buku($id){
+        $where = array('id_buku' =>$id);
+        $data['buku'] = $this->db->query("select * from buku B, kategori K where B.id_kategori=K.id_kategori and B.id_buku='$id'")->result();
+        $data['kategori'] =$this->M_perpus->get_data('kategori')->result();
 
-      $this->load->view('admin/header');
-      $this->load->view('admin/editbuku',$data);
-      $this->load->view('admin/footer');
+        $this->load->view('admin/header');
+        $this->load->view('admin/editbuku',$data);
+        $this->load->view('admin/footer');
     }
 
     function update_buku(){
